@@ -41,10 +41,11 @@ function reducer(state, action) {
       };
 
     case "start":
+      console.log(state);
       return {
         ...state,
         status: "active",
-        secondsRemaining: state.question.length * SECS_PER_QUESTION,
+        secondsRemaining: state.questions.length * SECS_PER_QUESTION,
       };
 
     case "newAnswer":
